@@ -1,18 +1,17 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Section.module.css";
 import axios from "axios";
 import Card from "../Card/Card";
+import Carousel from "../Carousel/Carousel";
 
-function Section({ title }) {
+function Section({ title, apiEndpoint }) {
   const [albums, setAlbums] = useState([]);
   const [collapse, setCollapse] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          "https://qtify-backend.labs.crio.do/albums/top"
-        );
+        const response = await axios.get(apiEndpoint);
         setAlbums(response.data);
       } catch (error) {
         console.log(error);
@@ -20,18 +19,18 @@ function Section({ title }) {
     };
 
     fetchData();
-  }, []);
+  }, [apiEndpoint]);
 
   return (
     <div className={styles.section}>
       <div className={styles.header}>
         <h2>{title}</h2>
         <button onClick={() => setCollapse(!collapse)}>
-          {collapse ? "Show All" : "Collapse"}
+          {collapse ? "Collapse" : "Show All"}
         </button>
       </div>
 
-      {!collapse && (
+      {collapse ? (
         <div className={styles.grid}>
           {albums.map((album) => (
             <Card
@@ -42,6 +41,17 @@ function Section({ title }) {
             />
           ))}
         </div>
+      ) : (
+        <Carousel
+          data={albums}
+          renderComponent={(album) => (
+            <Card
+              image={album.image}
+              title={album.title}
+              follows={album.follows}
+            />
+          )}
+        />
       )}
     </div>
   );
