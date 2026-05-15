@@ -29,6 +29,13 @@ function App() {
           title="New Albums"
           apiEndpoint="https://qtify-backend.labs.crio.do/albums/new"
         />
+
+        <Section
+          title="Songs"
+          apiEndpoint="https://qtify-backend.labs.crio.do/songs"
+          showCollapse={false}
+          isSongs={true}
+        />
       </div>
 
     </>

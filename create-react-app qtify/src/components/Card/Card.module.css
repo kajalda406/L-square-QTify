@@ -23,6 +23,7 @@
 
 /* Chip container */
 .chipContainer {
+ 
   padding: 8px;
   background-color: var(--color-white);
 }
@@ -32,6 +33,7 @@
   background-color: var(--color-black) !important;
   color: var(--color-white) !important;
   font-size: 12px !important;
+  margin: 8px;
 }
 
 /* Album Title OUTSIDE */
