@@ -1,8 +1,10 @@
 *{
   margin: 0;
   padding: 0;
+  background-color: #121212;
 }
 :root {
   --color-primary: #34C94B;   /* green */
   --color-black: #121212;
+  --color-white: #ffffff;
 }

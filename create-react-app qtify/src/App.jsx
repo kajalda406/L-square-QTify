@@ -6,6 +6,9 @@ import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 //import Button from "./components/Button/Button";
+//import Card from "./components/Card/Card";
+//import albumImg from "./assets/albums-img1.png";
+import Section from "./components/Section/Section";
 
 function App() {
   
@@ -15,6 +18,10 @@ function App() {
       
       <Navbar />
       <Hero />
+
+      <div>
+        <Section title="Top Albums" />
+      </div>
 
     </>
   )

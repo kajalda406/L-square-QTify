@@ -1,0 +1,48 @@
+/* Wrapper holds card + title */
+/* .wrapper {
+  width: 180px;
+} */
+
+/* White Card */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+/* Image section */
+.imageContainer {
+  height: 200px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Chip container */
+.chipContainer {
+  padding: 8px;
+  background-color: var(--color-white);
+}
+
+/* Chip styling */
+.chip {
+  background-color: var(--color-black) !important;
+  color: var(--color-white) !important;
+  font-size: 12px !important;
+}
+
+/* Album Title OUTSIDE */
+.title {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--color-white);
+}
+
+/* @media (max-width: 768px) {
+  .wrapper {
+    width: 150px;
+  }
+} */
